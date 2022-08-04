@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :posts, only: [:index]
+    get 'posts/filter', to: 'posts#filter'
   end
 end
